@@ -1,4 +1,5 @@
 package com.foivos.IRM;
+
 import java.awt.Rectangle;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,10 +39,11 @@ public class PropertiesHandler {
                 oFile = new FileOutputStream(propFile, true);
 
                 // default properties
-                properties.setProperty("GUIBoundsX",        Integer.toString(50));
-                properties.setProperty("GUIBoundsY",        Integer.toString(100));
-                properties.setProperty("GUIBoundsWidth",    Integer.toString(300));
-                properties.setProperty("GUIBoundsHeight",   Integer.toString(250));
+                properties.setProperty("GUIBoundsX", Integer.toString(50));
+                properties.setProperty("GUIBoundsY", Integer.toString(100));
+                properties.setProperty("GUIBoundsWidth", Integer.toString(300));
+                properties
+                        .setProperty("GUIBoundsHeight", Integer.toString(250));
 
                 properties.store(oFile, null);
             }
@@ -66,19 +68,20 @@ public class PropertiesHandler {
 
     // ------------------------------
     public Rectangle getGuiBounds() {
-        return new Rectangle(   Integer.parseInt(properties.getProperty("GUIBoundsX")),
-                                Integer.parseInt(properties.getProperty("GUIBoundsY")),
-                                Integer.parseInt(properties.getProperty("GUIBoundsWidth")),
-                                Integer.parseInt(properties.getProperty("GUIBoundsHeight")));
+        return new Rectangle(Integer.parseInt(properties
+                .getProperty("GUIBoundsX")), Integer.parseInt(properties
+                .getProperty("GUIBoundsY")), Integer.parseInt(properties
+                .getProperty("GUIBoundsWidth")), Integer.parseInt(properties
+                .getProperty("GUIBoundsHeight")));
 
     }
 
     // ------------------------------
     public void setGUIBounds(Rectangle rec) {
-        properties.setProperty("GUIBoundsX",        Integer.toString(rec.x));
-        properties.setProperty("GUIBoundsY",        Integer.toString(rec.y));
-        properties.setProperty("GUIBoundsWidth",    Integer.toString(rec.width));
-        properties.setProperty("GUIBoundsHeight",   Integer.toString(rec.height));
+        properties.setProperty("GUIBoundsX", Integer.toString(rec.x));
+        properties.setProperty("GUIBoundsY", Integer.toString(rec.y));
+        properties.setProperty("GUIBoundsWidth", Integer.toString(rec.width));
+        properties.setProperty("GUIBoundsHeight", Integer.toString(rec.height));
 
     }
 

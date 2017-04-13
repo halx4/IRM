@@ -34,10 +34,10 @@ public class Gui extends Frame implements GuiInterfaceforMultitool {
     private Button refreshButton, connectButton;
 
     private Image notConnectedImage = Toolkit.getDefaultToolkit().getImage(
-            "red.png");
+            getClass().getResource("resources/red.png"));
 
     private Image connectedImage = Toolkit.getDefaultToolkit().getImage(
-            "green.png");
+            getClass().getResource("resources/green.png"));
 
     private ExitHandler exitHandler = new ExitHandler();
 
