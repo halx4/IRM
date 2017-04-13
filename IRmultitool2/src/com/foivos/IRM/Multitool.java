@@ -54,7 +54,7 @@ public class Multitool implements MultitoolCoreInterface {
 
     } // end main
 
-    // ------------------------------
+    // -----------------------------
 
     Multitool() {
 
